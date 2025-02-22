@@ -1,0 +1,28 @@
+@import "animate.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* General Form Styling */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #009970;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 153, 112, 0.5);
+}
+
+/* Error Messages */
+span {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}

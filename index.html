@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل المنشأة - سلامة</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material UI Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex justify-center min-h-screen p-8">
+
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold text-green-600 text-center mb-6">تسجيل المنشأة</h2>
+
+        <form id="registrationForm" class="space-y-4">
+            <label>اسم المنشأة</label>
+            <input type="text" id="companyName" class="input-field" placeholder="أدخل اسم المنشأة" required>
+
+            <label>رقم السجل التجاري</label>
+            <input type="text" id="crNumber" class="input-field" placeholder="أدخل رقم السجل التجاري" required>
+
+            <label>البريد الإلكتروني</label>
+            <input type="email" id="email" class="input-field" placeholder="example@email.com" required>
+
+            <label>رقم الهاتف</label>
+            <input type="tel" id="phone" class="input-field" placeholder="+966xxxxxxxxx" required>
+
+            <label>كلمة المرور</label>
+            <input type="password" id="password" class="input-field" placeholder="********" required>
+
+            <label>تأكيد كلمة المرور</label>
+            <input type="password" id="confirmPassword" class="input-field" placeholder="********" required>
+
+            <label>المدينة</label>
+            <input type="text" id="city" class="input-field" placeholder="أدخل اسم المدينة" required>
+
+            <label>المنطقة</label>
+            <input type="text" id="region" class="input-field" placeholder="أدخل المنطقة" required>
+
+            <label>الرمز البريدي</label>
+            <input type="text" id="zip" class="input-field" placeholder="أدخل الرمز البريدي" required>
+
+            <label>نوع النشاط</label>
+            <select id="businessType" class="input-field" required>
+                <option value="">-- اختر نوع النشاط --</option>
+                <option value="retail">تجزئة</option>
+                <option value="service">خدمات</option>
+                <option value="manufacturing">تصنيع</option>
+                <option value="tech">تقنية</option>
+            </select>
+
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" class="w-5 h-5">
+                <label for="terms" class="ml-2 text-gray-700">أوافق على <a href="#" class="text-green-600 hover:underline">الشروط والأحكام</a></label>
+            </div>
+
+            <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold">تسجيل</button>
+        </form>
+
+        <button id="toggleDataBtn" class="w-full bg-blue-500 text-white py-2 rounded-lg mt-4">عرض بيانات المنشآت</button>
+        <div id="apiDataDropdown" class="hidden mt-2 bg-gray-100 p-4 rounded-lg shadow">
+            <ul id="apiDataList"></ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
